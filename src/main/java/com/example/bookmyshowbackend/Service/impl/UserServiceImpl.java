@@ -27,7 +27,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto getUser(int id) {
-        Optional<UserEntity> userEntity = userRepository.findById(id);
+
+        UserEntity user = new UserEntity();
+
+        UserEntity userEntity = userRepository.findById(id).get();
+
+        //.get() is an inbuilt function which will either throw error if entity is not found else it'll return entity
 
         UserDto userDto = UserConverter.convertEntityToDto(userEntity);
         return userDto;

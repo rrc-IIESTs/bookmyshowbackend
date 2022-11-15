@@ -4,19 +4,20 @@ package com.example.bookmyshowbackend.dto;
 import lombok.Builder;
 import lombok.Data;
 
-import java.time.LocalDate;
-import java.util.List;
-
-
 @Builder
 @Data
-public class MovieDto {
+public class TheatreDto {
+
 
     int id;
 
     String name;
 
-    LocalDate releaseDate;
+    String address;
 
-    List<ShowDto> showDtoList;
+    String city;
+
+
+    //ShowEntity
+    ShowDto showDto;
 }

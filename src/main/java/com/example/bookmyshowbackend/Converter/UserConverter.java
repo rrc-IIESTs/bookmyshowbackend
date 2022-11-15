@@ -17,7 +17,7 @@ public class UserConverter {
 
     }
 
-    public static UserDto convertEntityToDto(Optional<UserEntity> userEntity){
+    public static UserDto convertEntityToDto(UserEntity userEntity){
         return UserDto.builder().id(userEntity.getId()).name(userEntity.getName()).mobileNo(userEntity.getMobileNo()).build();
     }
 

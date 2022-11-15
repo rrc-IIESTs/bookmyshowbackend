@@ -3,10 +3,7 @@ package com.example.bookmyshowbackend.Model;
 
 import com.example.bookmyshowbackend.enums.SeatType;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -16,7 +13,7 @@ import javax.persistence.*;
 @Table(name = "theater_seats")
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Builder
 public class TheatreSeatEntity {
 
     @Id
